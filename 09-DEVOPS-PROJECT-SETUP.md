@@ -56,7 +56,7 @@ node {
 			-> Enter Sonar Token as secret text  <br/>
 
 4) Install SonarQube Scanner Plugin <br/>
--> Manage Jenkins -> Plugins -> Available -> Sonar Qube Scanner Plugin -> Install it
+-> Manage Jenkins -> Plugins -> Available -> "SonarQube Scanner" Plugin -> Install it
 
 5) Configure SonarQube Server <br/>
 -> Manage Jenkins -> Configure System -> Sonar Qube Servers -> Add Sonar Qube Server 
