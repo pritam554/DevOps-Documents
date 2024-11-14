@@ -61,6 +61,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ## Step-3 : Setup Docker in Jenkins ##
 ```
 curl -fsSL get.docker.com | /bin/bash
+This command adds the jenkins user to the docker group, allowing the Jenkins user to execute Docker commands without requiring sudo privileges.
 sudo usermod -aG docker jenkins
 sudo systemctl restart jenkins
 sudo docker version
