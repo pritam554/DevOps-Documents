@@ -19,14 +19,14 @@ node {
 1) Use Pipeline Syntax and Generate Script for Git Clone with Repo Details
 
 ```     
-  git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
+  git credentialsId: 'GIT-Credentials', url: 'https://github.com/pritam554/maven-web-app.git'
 ```
 
 2) Add Generated Script in Pipeline as a stage
 
 ```
  stage('clone repo') {        
-  git credentialsId: 'GIT-Credentials', url: 'https://github.com/ashokitschool/maven-web-app.git'
+  git credentialsId: 'GIT-Credentials', url: 'https://github.com/pritam554/maven-web-app.git'
 }
 ```
 
@@ -69,7 +69,7 @@ node {
 ```
 stage('SonarQube analysis') {
 	withSonarQubeEnv('Sonar-Server-7.8') {
-	def mavenHome = tool name: "Maven-3.9.4", type: "maven"
+	def mavenHome = tool name: "Maven-3.9.9", type: "maven"
 	def mavenCMD = "${mavenHome}/bin/mvn"
 	sh "${mavenCMD} sonar:sonar"
     }
@@ -84,7 +84,7 @@ stage('SonarQube analysis') {
 4) Generate Nexus Pipeline Syntax
 ```
 stage ('Nexus Upload'){
-nexusArtifactUploader artifacts: [[artifactId: '01-Maven-Web-App', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'Nexus-Credentials', groupId: 'in.ashokit', nexusUrl: '13.127.185.241:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ashokit-snapshot-repository', version: '1.0-SNAPSHOT'
+nexusArtifactUploader artifacts: [[artifactId: '01-Maven-Web-App', classifier: '', file: 'target/01-maven-web-app.war', type: 'war']], credentialsId: 'Nexus-Credentials', groupId: 'in.pritam', nexusUrl: '13.127.185.241:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'pritam-snapshot-repository', version: '1.0-SNAPSHOT'
 }
 ```
 
