@@ -26,8 +26,8 @@ ansible ALL=(ALL) NOPASSWD: ALL
 ```
 sudo vi /etc/ssh/sshd_config
 ```
--> comment PasswordAuthentication no
--> PermitEmptyPasswords yes
+-> PasswordAuthentication yes
+-> PermitEmptyPasswords no
 
 ### d) Restart the server ###
 ```   
@@ -100,3 +100,4 @@ sudo vi /etc/ansible/hosts
 ```
 ansible all -m ping
 ```
+
