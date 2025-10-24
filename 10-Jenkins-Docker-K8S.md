@@ -198,3 +198,5 @@ URL : http://LBR/context-path/
 kubectl get pods
 kubectl get svc
 
+eksctl delete cluster --name pritam-cluster --region ap-south-1
+
